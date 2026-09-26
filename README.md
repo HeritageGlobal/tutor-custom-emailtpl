@@ -144,8 +144,8 @@ took effect on whichever release you're running.
 ```bash
 pip install tutor-custom-emailtpl
 tutor plugins enable emailtpl
-tutor config save
-tutor images build openedx
+tutor config save --set EMAILTPL_INSTALL_SOURCE='git+https://github.com/sysnapps-com/tutor-custom-emailtpl.git'
+tutor images build openedx --no-cache --no-registry-cache
 tutor local launch
 ```
 
@@ -197,8 +197,8 @@ tutor local launch
 
 ```bash
 pip install --upgrade --force-reinstall "git+https://github.com/sysnapps-com/tutor-custom-emailtpl.git"
-tutor config save
-tutor images build openedx
+tutor config save --set EMAILTPL_INSTALL_SOURCE='git+https://github.com/sysnapps-com/tutor-custom-emailtpl.git'
+tutor images build openedx --no-cache --no-registry-cache
 tutor local launch
 ```
 
