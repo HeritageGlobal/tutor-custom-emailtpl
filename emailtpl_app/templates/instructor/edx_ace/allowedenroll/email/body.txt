@@ -1,5 +1,19 @@
-{% load i18n %}[SAMPLE OVERRIDE CONTENT -- not production copy]
+{% load i18n %}
 
-{% blocktrans trimmed %}You have been invited to enroll in {{ course_name }}. Visit {{ course_url }} or register at {{ registration_url }} to accept.{% endblocktrans %}
+{% autoescape off %}
+{% blocktrans trimmed %}Hola {{ full_name }}, ¡Te damos la bienvenida a {{ platform_name }}!{% endblocktrans %}
 
--- {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}
+{% blocktrans trimmed %}Has sido invitado a inscribirte en el curso {{ course_name }}.{% endblocktrans %}
+
+{% blocktrans trimmed %}Ya puedes acceder a la plataforma y comenzar tu experiencia de aprendizaje.{% endblocktrans %}
+
+{% blocktrans trimmed %}Accede directamente a tu curso desde este enlace {{ course_url }}{% endblocktrans %}
+
+{% blocktrans trimmed %}Si aún no tienes una cuenta o necesitas completar tu registro, puedes hacerlo aquí: {{ registration_url }}{% endblocktrans %}
+
+{% blocktrans trimmed %}Si tienes alguna duda o necesitas ayuda para acceder, ponte en contacto con {{ support_email }}{% endblocktrans %}
+
+{% blocktrans trimmed %}¡Te deseamos mucho éxito en tu trayectoria de aprendizaje!{% endblocktrans %}
+
+{% blocktrans trimmed %}El equipo de {{ platform_name }}!{% endblocktrans %}
+{% endautoescape %}

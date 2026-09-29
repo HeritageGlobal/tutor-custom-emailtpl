@@ -1,5 +1,13 @@
-{% load i18n %}[SAMPLE OVERRIDE CONTENT -- not production copy]
+{% load i18n %}
 
-{% blocktrans trimmed %}You have been unenrolled from {{ course_name }} by course staff.{% endblocktrans %}
+{% autoescape off %}
+{% blocktrans trimmed %}Hola {{ full_name }}, te escribimos desde {{ platform_name }}.{% endblocktrans %}
 
--- {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}
+{% blocktrans trimmed %}Te informamos que has sido dado de baja del curso {{ course_name }}.{% endblocktrans %}
+
+{% blocktrans trimmed %}Si crees que esto es un error o deseas más información, ponte en contacto con {{ support_email }}{% endblocktrans %}
+
+{% blocktrans trimmed %}¡Te deseamos mucho éxito en tu trayectoria de aprendizaje!{% endblocktrans %}
+
+{% blocktrans trimmed %}El equipo de {{ platform_name }}!{% endblocktrans %}
+{% endautoescape %}

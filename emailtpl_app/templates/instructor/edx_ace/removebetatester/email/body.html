@@ -1,4 +1,50 @@
 {% load i18n %}
-<!-- SAMPLE OVERRIDE CONTENT -- not production copy. Provided by tutor-custom-emailtpl. -->
-<p>{% blocktrans trimmed %}You have been removed as a beta tester for {{ course_name }}.{% endblocktrans %}</p>
-<p>&mdash; {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}</p>
+
+<h1>
+  {% blocktrans trimmed %}
+  Hola {{ full_name }}, te escribimos desde {{ platform_name }}.
+  {% endblocktrans %}
+</h1>
+
+<p>
+  {% blocktrans trimmed %}
+  Te informamos que has sido eliminado del programa de beta testers del curso {{ course_name }}.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Gracias por tu colaboración y tus comentarios durante la fase de pruebas.
+  {% endblocktrans %}
+</p>
+
+<p>
+  <a href="{{ course_url }}">
+    {% blocktrans trimmed %}
+    Puedes ver el estado del curso desde este enlace
+    {% endblocktrans %}
+  </a>
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Si tienes alguna duda o necesitas ayuda, ponte en contacto con {{ support_email }}
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Te deseamos mucho éxito en tu trayectoria de aprendizaje.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  El equipo de {{ platform_name }}
+  {% endblocktrans %}
+</p>
+<p>
+  {% blocktrans trimmed %}
+  Web: {{ site_name }}
+  {% endblocktrans %}
+</p>

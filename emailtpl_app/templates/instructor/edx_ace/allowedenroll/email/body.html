@@ -1,4 +1,64 @@
 {% load i18n %}
-<!-- SAMPLE OVERRIDE CONTENT -- not production copy. Provided by tutor-custom-emailtpl. -->
-<p>{% blocktrans trimmed %}You have been invited to enroll in {{ course_name }}. Visit {{ course_url }} or register at {{ registration_url }} to accept.{% endblocktrans %}</p>
-<p>&mdash; {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}</p>
+
+<h1>
+  {% blocktrans trimmed %}
+  Hola {{ full_name }}, te damos la bienvenida a {{ platform_name }}.
+  {% endblocktrans %}
+</h1>
+
+<p>
+  {% blocktrans trimmed %}
+  Has sido invitado a inscribirte en el curso {{ course_name }}.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Ya puedes acceder a la plataforma y comenzar tu experiencia de aprendizaje.
+  {% endblocktrans %}
+</p>
+
+<p>
+  <a href="{{ course_url }}">
+    {% blocktrans trimmed %}
+    Accede directamente a tu curso desde este enlace
+    {% endblocktrans %}
+  </a>
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Si aún no tienes una cuenta o necesitas completar tu registro, puedes hacerlo aquí:
+  {% endblocktrans %}
+  <br>
+  <a href="{{ registration_url }}">{{ registration_url }}</a>
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Una vez que hayas iniciado sesión, podrás acceder al curso y comenzar tus actividades.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Si tienes alguna duda o necesitas ayuda para acceder, ponte en contacto con {{ support_email }}
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  Te deseamos mucho éxito en tu trayectoria de aprendizaje.
+  {% endblocktrans %}
+</p>
+
+<p>
+  {% blocktrans trimmed %}
+  El equipo de {{ platform_name }}
+  {% endblocktrans %}
+</p>
+<p>
+  {% blocktrans trimmed %}
+  Web: {{ site_name }}
+  {% endblocktrans %}
+</p>

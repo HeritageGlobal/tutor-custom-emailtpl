@@ -1,5 +1,17 @@
-{% load i18n %}[SAMPLE OVERRIDE CONTENT -- not production copy]
+{% load i18n %}
 
-{% blocktrans trimmed %}You have been removed as a beta tester for {{ course_name }}.{% endblocktrans %}
+{% autoescape off %}
+{% blocktrans trimmed %}Hola {{ full_name }}, te escribimos desde {{ platform_name }}.{% endblocktrans %}
 
--- {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}
+{% blocktrans trimmed %}Te informamos que has sido eliminado del programa de beta testers del curso {{ course_name }}.{% endblocktrans %}
+
+{% blocktrans trimmed %}Gracias por tu colaboración y tus comentarios durante la fase de pruebas.{% endblocktrans %}
+
+{% blocktrans trimmed %}Puedes ver el estado del curso desde este enlace {{ course_url }}{% endblocktrans %}
+
+{% blocktrans trimmed %}Si tienes alguna duda o necesitas ayuda, ponte en contacto con {{ support_email }}{% endblocktrans %}
+
+{% blocktrans trimmed %}¡Te deseamos mucho éxito en tu trayectoria de aprendizaje!{% endblocktrans %}
+
+{% blocktrans trimmed %}El equipo de {{ platform_name }}!{% endblocktrans %}
+{% endautoescape %}

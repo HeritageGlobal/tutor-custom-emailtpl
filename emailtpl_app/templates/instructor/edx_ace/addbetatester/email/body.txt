@@ -1,5 +1,17 @@
-{% load i18n %}[SAMPLE OVERRIDE CONTENT -- not production copy]
+{% load i18n %}
 
-{% blocktrans trimmed %}You have been added as a beta tester for {{ course_name }}. Visit {{ course_url }}.{% endblocktrans %}
+{% autoescape off %}
+{% blocktrans trimmed %}Hola {{ full_name }}, ¡Te damos la bienvenida a {{ platform_name }}!{% endblocktrans %}
 
--- {% blocktrans trimmed %}{{ site_name }}{% endblocktrans %}
+{% blocktrans trimmed %}Te informamos que has sido añadido como beta tester del curso {{ course_name }}.{% endblocktrans %}
+
+{% blocktrans trimmed %}Como beta tester, podrás acceder al curso antes de su lanzamiento oficial y ayudarnos a mejorar la experiencia de aprendizaje con tus comentarios.{% endblocktrans %}
+
+{% blocktrans trimmed %}Accede directamente a tu curso desde este enlace {{ course_url }}{% endblocktrans %}
+
+{% blocktrans trimmed %}Si tienes alguna duda o necesitas ayuda para acceder, ponte en contacto con {{ support_email }}{% endblocktrans %}
+
+{% blocktrans trimmed %}¡Te deseamos mucho éxito en tu trayectoria de aprendizaje!{% endblocktrans %}
+
+{% blocktrans trimmed %}El equipo de {{ platform_name }}!{% endblocktrans %}
+{% endautoescape %}
